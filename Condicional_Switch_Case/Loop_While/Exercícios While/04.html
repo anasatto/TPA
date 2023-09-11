@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<body>
+
+    <!-- 4 - Crie um programa no qual irá perguntar qual tabuada o usuário desejar que seja exibida. Logo em seguida exiba a tabuada referente a escolha do usuário. -->
+    
+    <script>
+
+        let tabuada = parseInt(prompt('Digite uma tabuada:'));
+
+        contador = 1;
+        while (contador <= 10) {
+            let resultado;
+            resultado = tabuada * contador;
+            console.log(contador + 'x' + tabuada + '=' + resultado);
+            contador++;
+        }
+
+
+    </script>
+
+</body>
+</html>
