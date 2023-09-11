@@ -12,14 +12,26 @@
     
     <script>
 
-        let confirmar = prompt('Digite se "sim" se quiser que o programa continue. Ou "não" caso queira que pare a excussão.')
-        let numero = 1
-        let resultado
-        let contador
+        let numero = 1;
 
-        while (contador <= 100){
-            
+        function imprimirProximoNumero() {
+            if (numero <= 100) {
+                let resposta = prompt(`Deseja imprimir o número ${numero}? (sim/não)`);
+                
+                if (resposta === "sim") {
+                    console.log(numero);
+                    numero++;
+                    imprimirProximoNumero();
+                } else if (resposta === "não") {
+                    alert("Programa finalizado.");
+                } else {
+                    alert("Por favor, responda com 'sim' ou 'não'.");
+                    imprimirProximoNumero();
+                }
+            }
         }
+
+        imprimirProximoNumero();
 
     </script>
 
